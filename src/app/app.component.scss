@@ -1,0 +1,23 @@
+.tic-tac-toe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tic-tac-toe-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 30px;
+    padding: 10px;
+    place-content: center;
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      height: 100px;
+      cursor: pointer;
+      &:not(:empty) {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
